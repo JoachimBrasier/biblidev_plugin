@@ -30,6 +30,13 @@ module.exports = {
           use: "css-loader",
         }),
       },
+      {
+        test: /\.svg$/,
+        issuer: {
+          test: /\.(js|ts)x?$/,
+        },
+        use: ["@svgr/webpack"],
+      },
     ],
   },
   plugins: [
