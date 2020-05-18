@@ -1,6 +1,6 @@
 {
   "name": "biblidev_plugin",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Naviguez rapidement parmi les ressources que vous avez partagées, aimées et notées",
   "scripts": {
     "dev": "webpack -w",

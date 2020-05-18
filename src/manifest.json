@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Biblidev",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Naviguez rapidement parmi les ressources que vous avez partagées, aimées et notées",
   "icons": {
     "16": "assets/icons/16x16.png",
