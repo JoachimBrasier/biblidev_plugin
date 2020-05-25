@@ -54,7 +54,11 @@ const Login = () => {
   };
 
   return (
-    <Form noValidate onFinish={handleSubmit} style={{ width: 300 }}>
+    <Form
+      noValidate
+      onFinish={handleSubmit}
+      style={{ width: "100%", padding: 30 }}
+    >
       <div className="logo">
         <Logo />
       </div>

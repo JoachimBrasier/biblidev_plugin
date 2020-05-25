@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Spin } from "antd";
 import { LoadingOutlined } from "@ant-design/icons";
-import "antd/lib/spin/style/css";
-import Login from "./components/Login";
 import Axios from "axios";
+import Login from "./components/Login";
+import Header from "./components/Header";
+import FavList from "./components/FavList";
+import "antd/lib/spin/style/css";
 
 const isChrome = navigator.userAgent.indexOf("Chrome") != -1;
 
@@ -53,13 +55,13 @@ const Popup = () => {
   }, []);
 
   return (
-    <div style={{ padding: 30 }}>
+    <div style={{ width: user ? 600 : 300 }}>
       {loading ? (
         <Spin indicator={<LoadingOutlined />} />
       ) : user ? (
         <div>
-          <p>{`Bonjour ${user.username}`}</p>
-          <button onClick={handleLogout}>logout</button>
+          <Header onLogout={handleLogout} />
+          <FavList favorites={user.favorites} />
         </div>
       ) : (
         <Login />
